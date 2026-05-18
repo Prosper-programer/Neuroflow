@@ -1,0 +1,151 @@
+:root {
+  /* ================== COLORS ================== */
+  /* Backgrounds */
+  --bg-color: #06060c;           /* Very deep dark blue/black */
+  --surface-color: #11111a;      /* Slightly lighter background for cards/nav */
+  --surface-glass: rgba(255, 255, 255, 0.03); /* Transparent background for glassmorphism */
+  
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  /* Primary Brand Colors */
+  --primary-color: #7b3fe4;      /* Vibrant Purple for buttons */
+  --primary-hover: #672bc9;      /* Darker purple for hover states */
+  
+  /* Text Colors */
+  --text-main: #ffffff;          /* Pure white for headings and main text */
+  --text-muted: #9ca3af;         /* Light grayish-blue for descriptions and secondary text */
+
+  /* Gradients */
+  --text-gradient: linear-gradient(90deg, #b678ff, #6248ff); /* Purple to blue text gradient */
+  --bg-glow: radial-gradient(circle at center, rgba(123, 63, 228, 0.15) 0%, rgba(6, 6, 12, 0) 70%); /* Subtle glowing effect */
+
+  /* ================== TYPOGRAPHY ================== */
+  --font-family: 'Inter', sans-serif;
+
+  /* ================== SIZING & LAYOUT ================== */
+  --max-width: 1200px;           /* Max width for containers to keep layout centered */
+  --transition-speed: 0.3s ease; /* Default transition for hover effects */
+  
+  /* Border Radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+}
+
+/* ================== CSS RESET & BASE STYLES ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  padding: 30px 5%;
+  position: relative;
+  z-index: 100; /* Ensures navbar stays above any background elements */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+.logo-icon-placeholder {
+  width: 28px;
+  height: 28px;
+  background: var(--text-gradient);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(123, 63, 228, 0.5); /* Glowing effect for the brain logo */
+}
+
+/* Menu Links */
+.navbar-menu {
+  display: flex; 
+  gap: 40px;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+}
+
+/* Actions & Buttons */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.login-btn {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.login-btn:hover {
+  color: var(--primary-color);
+}
+
+/* Global Button Styles (we will reuse these throughout the site) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-main);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 20px rgba(123, 63, 228, 0.4); /* Premium purple glow effect on hover */
+  transform: translateY(-2px); /* Slight lift interaction */
+}
