@@ -84,12 +84,13 @@ ul {
   cursor: pointer;
 }
 
-.logo-icon-placeholder {
-  width: 28px;
-  height: 28px;
-  background: var(--text-gradient);
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(123, 63, 228, 0.5); /* Glowing effect for the brain logo */
+.brain-logo-icon {
+  filter: drop-shadow(0 0 10px rgba(123, 63, 228, 0.5)); /* Glowing effect for the SVG */
+  transition: transform var(--transition-speed);
+}
+
+.navbar-logo:hover .brain-logo-icon {
+  transform: scale(1.1); /* Brain subtly pulses when you hover over the logo */
 }
 
 /* Menu Links */
