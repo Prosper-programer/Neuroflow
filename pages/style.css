@@ -150,3 +150,212 @@ ul {
   box-shadow: 0 4px 20px rgba(123, 63, 228, 0.4); /* Premium purple glow effect on hover */
   transform: translateY(-2px); /* Slight lift interaction */
 }
+
+/* ========== Header Section ============== */
+.hero-section {
+  padding: 80px 5%;
+  position: relative;
+}
+
+/* Background Glow Effects */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: var(--bg-glow);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(80px);
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Tag */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--surface-glass);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  width: fit-content;
+  color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.hero-tag .tag-icon {
+  font-size: 14px;
+}
+
+/* Title */
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.highlight-text {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 90%;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* CTA Group */
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--surface-glass);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.play-icon {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+/* Trusted By */
+.hero-trusted-by {
+  margin-top: 40px;
+}
+
+.trusted-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.trusted-logos {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.company-logo {
+  color: #4b5563; /* Darker grey to look like muted logos */
+  transition: all var(--transition-speed);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.company-logo:hover {
+  color: var(--text-muted);
+  transform: translateY(-2px);
+}
+
+.company-logo svg {
+  height: 28px;
+  width: auto;
+}
+
+/* ================== HERO VISUAL (RIGHT SIDE) ================== */
+.hero-visual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  animation: float 6s ease-in-out infinite;
+  perspective: 1000px;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  transform: rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.5s ease;
+  display: block;
+  
+  /* Seamless blending with background */
+  mix-blend-mode: screen; 
+  filter: drop-shadow(0 0 20px rgba(123, 63, 228, 0.2)); /* Optional subtle glow instead of shadow */
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.header-image-wrapper:hover .header-image {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-content {
+    align-items: center;
+  }
+  
+  .hero-description {
+    width: 100%;
+  }
+  
+  .hero-trusted-by {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-image {
+    transform: none;
+  }
+  
+  .header-image-wrapper:hover .header-image {
+    transform: none;
+  }
+}
