@@ -161,15 +161,16 @@ ul {
 .hero-section::before {
   content: '';
   position: absolute;
-  top: 10%;
-  right: 10%;
-  width: 500px;
-  height: 500px;
-  background: var(--bg-glow);
-  border-radius: 50%;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(123, 63, 228, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(98, 72, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 30px 30px;
+  pointer-events: none;
   z-index: -1;
-  filter: blur(80px);
 }
+
 
 .hero-container {
   display: flex;
@@ -192,16 +193,18 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  background: var(--surface-glass);
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  padding: 10px 20px;
+  background: rgba(123, 63, 228, 0.08);
+  border: 1px solid rgba(123, 63, 228, 0.2);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
   width: fit-content;
-  color: var(--primary-color);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  color: #b678ff;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(123, 63, 228, 0.1);
 }
+
 
 .hero-tag .tag-icon {
   font-size: 14px;
@@ -209,14 +212,16 @@ ul {
 
 /* Title */
 .hero-title {
-  font-size: 4.5rem;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2px;
 }
+
 
 .highlight-text {
   background: var(--text-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -272,11 +277,14 @@ ul {
 }
 
 .company-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   color: #4b5563; /* Darker grey to look like muted logos */
   transition: all var(--transition-speed);
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  text-align: center;
 }
 
 .company-logo:hover {
@@ -285,9 +293,99 @@ ul {
 }
 
 .company-logo svg {
-  height: 28px;
+  /* SVGs scale by height/width. Setting height to 1.25em lets font-size control the size! */
+  height: 1.25em; 
   width: auto;
+  flex-shrink: 0;
 }
+
+.logo-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
+}
+.partners-banner {
+  padding: 60px 5%;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.banner-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.partners-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #4b5563; /* Muted gray */
+  transition: all var(--transition-speed);
+  cursor: pointer;
+  filter: grayscale(1);
+  opacity: 0.6;
+  text-align: center;
+  width: max-content;
+  animation: scroll 4s linear infinite alternate;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  color: var(--text-main);
+  transform: translateY(-2px);
+}
+.partners-row:hover .partner-logo{
+  animation-play-state: paused;
+}
+
+.partner-logo svg {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.partner-name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+/* Response for banner */
+@media (max-width: 768px) {
+  .partners-row {
+    justify-content: center;
+  }
+}
+
 
 /* ================== HERO VISUAL (RIGHT SIDE) ================== */
 .hero-visual {
@@ -296,6 +394,20 @@ ul {
   display: flex;
   justify-content: flex-end;
 }
+
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(123, 63, 228, 0.4) 0%, transparent 70%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
 
 .header-image-wrapper {
   position: relative;
@@ -328,6 +440,15 @@ ul {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
+}
+
+@keyframes scroll {
+  0%{
+    transform:translateX(0%);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
 }
 
 /* Responsive adjustments */
