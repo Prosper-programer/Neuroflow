@@ -42,23 +42,33 @@
         <span class="logo-text">NeuroFlow</span>
       </div>
 
-      <!-- Navigation Menu -->
-      <ul class="navbar-menu">
-        <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
-        <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-      </ul>
+      <!-- Hamburger Menu (Mobile Only) -->
+      <div class="navbar-hamburger" id="navbar-hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
 
-      <!-- Navbar Actions (Login/Get Started) -->
-      <div class="navbar-actions">
-        <a href="#login" class="login-btn">Log in</a>
-        <a href="#get-started" class="btn btn-primary get-started-btn">Get Started</a>
+      <div class="navbar-content" id="navbar-content">
+        <!-- Navigation Menu -->
+        <ul class="navbar-menu">
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        </ul>
+
+        <!-- Navbar Actions (Login/Get Started) -->
+        <div class="navbar-actions">
+          <a href="#login" class="login-btn">Log in</a>
+          <a href="#get-started" class="btn btn-primary get-started-btn">Get Started</a>
+        </div>
       </div>
 
     </div>
   </nav>
+
 
   <!-- ==================== HERO SECTION ==================== -->
   <header class="hero-section">
@@ -132,7 +142,7 @@
       <!-- Right Column: Visual Image -->
       <div class="hero-visual">
         <div class="header-image-wrapper">
-          <img src="../assets/header_image.png" alt="NeuroFlow Header Visual" class="header-image">
+          <img src="../assets/hero_brain.png" alt="NeuroFlow Header Visual" class="header-image">
         </div>
       </div>
 
@@ -290,6 +300,342 @@
       </div>
     </div>
   </section>
+
+  <!-- ==================== SEE IT IN ACTION ==================== -->
+  <section id="action" class="showcase-section">
+    <div class="container showcase-container">
+      
+      <!-- Left: Content & Tabs -->
+      <div class="showcase-info">
+        <div class="hero-tag"><span class="tag-icon">✨</span> SEE IT IN ACTION</div>
+        <h2 class="showcase-title">One Platform.<br>Endless Possibilities.</h2>
+        <p class="showcase-desc">NeuroFlow adapts to your workflow and helps you achieve more every day.</p>
+        
+        <div class="showcase-tabs">
+          <!-- Tab 1: Active -->
+          <div class="showcase-tab active">
+            <span class="tab-num">01</span>
+            <div class="tab-content">
+              <h4>Plan your day</h4>
+              <p>Organize tasks and priorities</p>
+            </div>
+          </div>
+          
+          <!-- Tab 2 -->
+          <div class="showcase-tab">
+            <span class="tab-num">02</span>
+            <div class="tab-content">
+              <h4>Automate tasks</h4>
+              <p>Let AI handle the busy work</p>
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="showcase-tab">
+            <span class="tab-num">03</span>
+            <div class="tab-content">
+              <h4>Track progress</h4>
+              <p>Get insights and improve</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual Placeholder -->
+      <div class="showcase-visual">
+        <div class="visual-inner">
+          <!-- ====================================================== 
+               DASHBOARD CALENDAR IMAGE GOES HERE 
+               Suggested Specs: 1200x800, Transparent background
+               ====================================================== -->
+          <div class="image-placeholder">
+             <img src="../assets/dashboard_preview.png" alt="Showcase Visual" class="showcase-img">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section id="how-it-works" class="steps-section">
+    <div class="container flex-column">
+      
+      <div class="section-header">
+        <h2 class="section-title">How it Works</h2>
+        <p class="section-subtitle">Get started in 3 simple steps</p>
+      </div>
+
+      <div class="steps-timeline">
+        <!-- Vertical Line -->
+        <div class="timeline-line"></div>
+
+        <!-- Step 01 (Left) -->
+        <div class="step-item step-left">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3 class="step-title">Connect your tools</h3>
+            <p class="step-text">Sync all your favorite apps and data sources in one click.</p>
+          </div>
+        </div>
+
+        <!-- Step 02 (Right) -->
+        <div class="step-item step-right">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3 class="step-title">Set your goals</h3>
+            <p class="step-text">Choose your priorities and let AI plan your ideal workflow.</p>
+          </div>
+        </div>
+
+        <!-- Step 03 (Left) -->
+        <div class="step-item step-left">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3 class="step-title">Automate & Achieve</h3>
+            <p class="step-text">Watch your productivity soar as AI handles the execution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING SECTION ==================== -->
+  <section id="pricing" class="pricing-section">
+    <div class="container flex-column">
+      
+      <div class="section-header">
+        <h2 class="section-title">Choose the Perfect Plan</h2>
+        <p class="section-subtitle">Flexible pricing for teams of all sizes</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="plan-name">Starter</h3>
+            <div class="plan-price">$0<span>/mo</span></div>
+          </div>
+          <ul class="plan-features">
+            <li><span>✓</span> Basic AI Automation</li>
+            <li><span>✓</span> 3 Team Projects</li>
+            <li><span>✓</span> Standard Analytics</li>
+            <li class="disabled"><span>✕</span> Priority Support</li>
+          </ul>
+          <a href="#" class="btn btn-secondary plan-btn">Get Started</a>
+        </div>
+
+        <!-- Pro Plan (Popular) -->
+        <div class="pricing-card popular">
+          <div class="popular-tag">MOST POPULAR</div>
+          <div class="pricing-header">
+            <h3 class="plan-name">Pro</h3>
+            <div class="plan-price">$29<span>/mo</span></div>
+          </div>
+          <ul class="plan-features">
+            <li><span>✓</span> Advanced AI Workflows</li>
+            <li><span>✓</span> Unlimited Projects</li>
+            <li><span>✓</span> Full Analytics Suite</li>
+            <li><span>✓</span> Priority 24/7 Support</li>
+          </ul>
+          <a href="#" class="btn btn-primary plan-btn">Start Free Trial</a>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="plan-name">Enterprise</h3>
+            <div class="plan-price">$99<span>/mo</span></div>
+          </div>
+          <ul class="plan-features">
+            <li><span>✓</span> Custom AI Models</li>
+            <li><span>✓</span> Dedicated Manager</li>
+            <li><span>✓</span> Advanced Security</li>
+            <li><span>✓</span> SLA Guarantee</li>
+          </ul>
+          <a href="#" class="btn btn-secondary plan-btn">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container flex-column">
+      
+      <div class="section-header">
+        <h2 class="section-title">What Our Users Say</h2>
+        <p class="section-subtitle">Join 10,000+ productive professionals</p>
+      </div>
+
+      <!-- Testimonials Slider -->
+      <div class="testimonials-slider-wrapper">
+        <div class="testimonials-container" id="testimonials-container">
+          <div class="testimonials-track" id="testimonials-track">
+            
+            <!-- Slide 1 -->
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">"NeuroFlow has completely changed how I manage my team. The AI scheduling is like magic."</p>
+              <div class="testimonial-user">
+                <img src="https://i.pravatar.cc/150?u=1" alt="Sarah" class="user-avatar">
+                <div class="user-info">
+                  <span class="user-name">Sarah Jenkins</span>
+                  <span class="user-title">Product Manager at Google</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">"Finally an AI tool that actually saves time instead of creating more work to manage."</p>
+              <div class="testimonial-user">
+                <img src="https://i.pravatar.cc/150?u=2" alt="David" class="user-avatar">
+                <div class="user-info">
+                  <span class="user-name">David Chen</span>
+                  <span class="user-title">Tech Lead at Microsoft</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">"The automation features are incredibly intuitive. We've seen a 40% boost in efficiency."</p>
+              <div class="testimonial-user">
+                <img src="https://i.pravatar.cc/150?u=3" alt="Elena" class="user-avatar">
+                <div class="user-info">
+                  <span class="user-name">Elena Rodriguez</span>
+                  <span class="user-title">CEO at Webflow</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">"The integration with Slack and Notion is seamless. It's now the backbone of our workflow."</p>
+              <div class="testimonial-user">
+                <img src="https://i.pravatar.cc/150?u=4" alt="Marcus" class="user-avatar">
+                <div class="user-info">
+                  <span class="user-name">Marcus Thorne</span>
+                  <span class="user-title">Design Lead at Airbnb</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">"I love the focus mode. It actually helps me get deep work done in an open office."</p>
+              <div class="testimonial-user">
+                <img src="https://i.pravatar.cc/150?u=5" alt="Olivia" class="user-avatar">
+                <div class="user-info">
+                  <span class="user-name">Olivia Vance</span>
+                  <span class="user-title">Software Engineer at Spotify</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">"NeuroFlow's AI analytics identified bottlenecks we didn't even know existed."</p>
+              <div class="testimonial-user">
+                <img src="https://i.pravatar.cc/150?u=6" alt="James" class="user-avatar">
+                <div class="user-info">
+                  <span class="user-name">James Wilson</span>
+                  <span class="user-title">Operations at Coinbase</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="slider-arrow prev-arrow" id="prev-btn" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          
+          <div class="slider-dots" id="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <button class="slider-arrow next-arrow" id="next-btn" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2 class="cta-title">Ready to supercharge your workflow?</h2>
+        <p class="cta-text">Join thousands of teams using NeuroFlow to automate their success.</p>
+        <div class="cta-btns">
+          <a href="#" class="btn btn-primary">Get Started for Free</a>
+          <a href="#" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="navbar-logo">
+          <!-- Logo SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brain-logo-icon"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg>
+          <span class="logo-text">NeuroFlow</span>
+        </div>
+        <p class="footer-tagline">AI Powered Productivity for modern teams.</p>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 NeuroFlow AI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
